@@ -25,4 +25,9 @@ input[type=checkbox]
   padding: 20px;
   margin-left: 20px;
   margin-top: 8px;
+  cursor: pointer;
+}
+
+.postRow:hover{
+    color: darkgrey;
 }

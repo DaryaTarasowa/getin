@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
-
+import Row from 'react-bootstrap/Row'
 
 
 export type PostProps = {
@@ -19,19 +19,22 @@ export interface PostInTableProps extends PostProps {
     onDeletePost: (id: number) => void,
 }
 
-
 export default function Post(props: PostInTableProps) {
     return (
-        <React.Fragment>
-            <Col className="col col-sm-1">
+        <Row key={`post${props.id}`} className="postRow">
+            <Col className="col col-sm-2">
                 <input
                     type='checkbox'
                     checked={props.selected}
                     onChange={props.onToggleSelection}
-                    style={{cursor: "pointer"}}
                 />
             </Col>
-            <Col style={{cursor: "pointer"}}onClick={props.onToggleSelection}>{props.title}</Col>
+            <Col 
+                style={{cursor: "pointer"}}
+                onClick={props.onToggleSelection}
+            >
+                { props.title }
+            </Col>
             <Col className="col col-sm-2">
                 <Link 
                     href={`/postDetails/${props.id}`}
@@ -49,6 +52,6 @@ export default function Post(props: PostInTableProps) {
                     Delete
                 </Button>
             </Col>
-        </React.Fragment>
+        </Row>
     )
 }
