@@ -2,12 +2,16 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 type Data = {
-  name: string
+    pid: string
 }
 
 export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
+    req: NextApiRequest,
+    res: NextApiResponse<Data>
 ) {
-  res.status(200).json({ name: 'John Doe' })
+    const { pid } = req.query  
+    const result = {
+        pid: pid
+    } as Data
+    res.status(200).json(result)
 }
