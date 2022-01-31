@@ -14,3 +14,15 @@ a {
 * {
   box-sizing: border-box;
 }
+
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  padding: 20px;
+  margin-left: 20px;
+  margin-top: 8px;
+}

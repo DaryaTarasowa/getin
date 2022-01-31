@@ -4,9 +4,6 @@ import Link from 'next/link'
 
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
-import styled from 'styled-components'
-import Head from 'next/head'
-import Image from 'next/image'
 import Button from 'react-bootstrap/Button'
 import { Container, Row, Col } from 'react-bootstrap'
 
@@ -82,7 +79,7 @@ const Home: NextPage = () => {
     }
 
     return (
-        <Container>
+        <Container className="mt-5">
             <Container fluid>
                 <Row>
                     <Col className="col col-sm-1"><h4>Select</h4></Col>

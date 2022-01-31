@@ -13,9 +13,9 @@ export type PostCardProps = {
 export default function PostCard(props: PostCardProps) {
 
     return (
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '20rem' }}>
             <Card.Img variant="top" src={props.img} />
-            <Card.Body>
+            <Card.Body className="overflow-auto" style={{ height: '16rem'}}>
                 <Card.Title>{props.post.title}</Card.Title>
                 <Card.Text>
                     {props.post.body}

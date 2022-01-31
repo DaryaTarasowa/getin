@@ -28,9 +28,10 @@ export default function Post(props: PostInTableProps) {
                     type='checkbox'
                     checked={props.selected}
                     onChange={props.onToggleSelection}
+                    style={{cursor: "pointer"}}
                 />
             </Col>
-            <Col>{props.title}</Col>
+            <Col style={{cursor: "pointer"}}onClick={props.onToggleSelection}>{props.title}</Col>
             <Col className="col col-sm-2">
                 <Link 
                     href={`/postDetails/${props.id}`}
