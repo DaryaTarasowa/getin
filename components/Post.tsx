@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react'
 import Link from 'next/link'
 
 import Button from 'react-bootstrap/Button'
@@ -22,7 +22,7 @@ export interface PostInTableProps extends PostProps {
 export default function Post(props: PostInTableProps) {
     return (
         <Row key={`post${props.id}`} className="postRow">
-            <Col className="col col-sm-2">
+            <Col className='col col-sm-2'>
                 <input
                     type='checkbox'
                     checked={props.selected}
@@ -30,23 +30,23 @@ export default function Post(props: PostInTableProps) {
                 />
             </Col>
             <Col 
-                style={{cursor: "pointer"}}
+                className='pointer'
                 onClick={props.onToggleSelection}
             >
                 { props.title }
             </Col>
-            <Col className="col col-sm-2">
+            <Col className='col col-sm-2'>
                 <Link 
                     href={`/postDetails/${props.id}`}
                     passHref
                 >
-                    <Button variant="outline-secondary" size="sm">
+                    <Button variant='outline-secondary' size='sm'>
                         Show
                     </Button>
                 </Link>{' '}
                 <Button 
-                    variant="outline-danger"
-                    size="sm"
+                    variant='outline-danger'
+                    size='sm'
                     onClick={() => props.onDeletePost(props.id)}
                 >
                     Delete

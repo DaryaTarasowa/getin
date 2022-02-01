@@ -1,8 +1,8 @@
-import React from "react"
+import React from 'react'
 
-import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
-import { PostProps } from "./Post"
+
+import { PostProps } from './Post'
 
 export type PostCardProps = {
     post: PostProps,
@@ -12,9 +12,9 @@ export type PostCardProps = {
 export default function PostCard(props: PostCardProps) {
 
     return (
-        <Card style={{ width: '20rem' }} className="mt-3">
-            <Card.Img variant="top" src={props.img} />
-            <Card.Body className="overflow-auto" style={{ height: '16rem'}}>
+        <Card style={{ width: '20rem' }} className='mt-3'>
+            <Card.Img variant='top' src={props.img} />
+            <Card.Body className='overflow-auto' style={{ height: '16rem'}}>
                 <Card.Title>{ props.post.title }</Card.Title>
                 <Card.Text>
                     { props.post.body }

@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react'
-
 import axios from 'axios'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
+import Button from 'react-bootstrap/Button'
+import Container from 'react-bootstrap/Container'
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
 
 import PostCard from '../../components/PostCard'
 import { PostProps } from '../../components/Post'
-
-import { Container, Row, Col, Button } from 'react-bootstrap'
 
 const PostDetails = () => {
     const router = useRouter()
@@ -44,13 +45,13 @@ const PostDetails = () => {
     }
 
     return (
-        <Container className="mt-2">
+        <Container className='mt-2'>
             <Row>
                 { posts.map(renderPostCard) }
             </Row>
-            <Row className="justify-content-center mt-3">
+            <Row className='justify-content-center mt-3'>
                 <Link href="/" passHref>
-                    <Button variant="primary">Go Back</Button>
+                    <Button variant='primary'>Go Back</Button>
                 </Link>
             </Row>
         </Container>
